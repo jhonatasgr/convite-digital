@@ -1,0 +1,61 @@
+GET http://localhost:3333/ping
+
+###
+GET http://localhost:3333/events
+###
+GET http://localhost:3333/events/1c7a4d7e-fe4b-4512-af1a-e27eb188a2ef
+
+###
+GET http://localhost:3333/events/evento-js-avancado
+###
+GET http://localhost:3333/events/validate/evento-js-avancado23323/1c7a4d7e-fe4b-4512-af1a-e27eb188a2ef
+
+###
+POST http://localhost:3333/events/access
+Content-Type: application/json
+
+{
+	"id": "24b2ecf8-b93b-4c48-9573-5f7a50c6bc8d",
+	"password": "front1232"
+}
+
+###
+POST http://localhost:3333/events/evento-js-avancado/guest
+Content-Type: application/json
+
+{
+	"id": "b8f933e1-33f3-4ca4-be51-857e9326659e",
+	"name": "João Ninguém",
+	"email": "joao@example.com",
+	"confirmed": true,
+	"hasACompanions": true,
+	"amountOfCompanions": 1
+}
+
+###
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+	"id": "1d15000b-727e-43c9-a7fc-c6d93e685f41",
+	"date": "2024-01-09T14:30:00.000Z",
+	"name": "Evento de teste",
+	"image": "https://via.placeholder.com/150", 
+	"slug": "evento-de-teste",
+	"location": "Rua Teste, 123",
+	"password": "teste123",
+	"description": "Descrição do evento de teste",
+	"imageBackground": "https://via.placeholder.com/150",
+	"expectedAudience": 100,
+	"guests": [
+		{
+			"id": "c2020862-2b61-4920-9c54-eb28d9950d89",
+			"name": "Maria Ninguém",
+			"email": "maria@examplweqqweqweqweqee.com",
+			"confirmed": true,
+			"hasACompanions": true,
+			"amountOfCompanions": 10
+		}
+	]
+}
+

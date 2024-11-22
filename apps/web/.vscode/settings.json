@@ -1,0 +1,7 @@
+{
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
+  "code-runner.executorMap": {
+    "typescript": "npx tsx",
+  }
+}
